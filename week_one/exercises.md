@@ -55,7 +55,7 @@ Construir un programa en Python 3.11 que resuelva cada uno de los siguientes pro
                           4 3 3 3 3 3 4
                           4 4 4 4 4 4 4
 
-- Determinar si una cadena S es un palindromo, un palindromo es aquella sucesión de caracteres en donde ci = cn-i para todo i > 0
+- Determinar si una cadena S es un palindromo, un palindromo es aquella sucesión de caracteres en donde ci = cn-i para todo i > 0 - <span style="color:green;">Done</span>
 
          input: 
               anitalavalatina
