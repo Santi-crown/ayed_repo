@@ -6,7 +6,7 @@ Construir un programa en Python 3.11 que resuelva cada uno de los siguientes pro
                   c0, c1, c2 ...... cn
     
     
-    Determinar aquel caracter ci el cual tiene el mayor número de repeticiones ( No necesariamente contiguas) dentro de S
+    Determinar aquel caracter ci el cual tiene el mayor número de repeticiones ( No necesariamente contiguas) dentro de S - <span style="color:green;">Done</span>
 
         Casos de prueba: 
       
