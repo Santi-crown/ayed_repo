@@ -40,17 +40,12 @@ def palindrome(word):
     else:
         print("False")       
 
-# For this exercise we're goin to use the Euclidean Algorithm - (incoSrrect implementation)
+# Exercise four
+# Euclidean Algorithm 
 def gcd_two_numbers(n_1,n_2):
     while n_2 != 0:    
-        # We are gonna 
         n_1, n_2 = n_2, n_1 % n_2
     return n_1
-
-# def gcd(x, y):
-#     while y != 0:
-#         x, y = y, x % y
-#     return x
 
 
 def main():    
@@ -68,14 +63,6 @@ def main():
     # Exercise four
     gcd = gcd_two_numbers(n_1,n_2)
     print(f"The GCD of {n_1} and {n_2} is {gcd}")
-
-
-    # num1 = 24
-    # num2 = 54
-    # print(f"The GCD of {num1} and {num2} is **{gcd(num1, num2)}**.")
-
 main()
-
-# Exercise four
 
 
