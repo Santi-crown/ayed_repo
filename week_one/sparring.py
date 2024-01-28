@@ -42,6 +42,8 @@ def palindrome(word):
 
 # Exercise four
 # Euclidean Algorithm 
+
+# This algorithm repeatedly divides the larger number by the smaller number and assigns the remainder as the new divisor until the remainder becomes zero. Then, the last non-zero remainder is the gcd.
 def gcd_two_numbers(n_1,n_2):
     while n_2 != 0:    
         n_1, n_2 = n_2, n_1 % n_2
