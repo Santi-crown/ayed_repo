@@ -83,3 +83,11 @@ Construir un programa en Python 3.11 que resuelva cada uno de los siguientes pro
 **Entregables:** .zip con las implementaciones, usar el conocimiento existente de sus cursos anteriores de programación, el formato de las entradas del usuario están definidas en la categoría **Input**, la salida esperada esta en la categoría **Output**. 
 
 **Nota** : No es necesario que el programa guarde las entradas o acumule las salidas, por cada caso de entrada (Línea de input) se debe generar una línea de salida (output)
+
+---
+![Alt text](image.png)
+
+```Python 
+quotient = dividend // divisor  # Integer division to get the quotient
+remainder = dividend % divisor   # Modulo operator to get the remainder
+```
