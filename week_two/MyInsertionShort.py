@@ -12,5 +12,7 @@ def insertionSort(seq):
         result = addElement(result,seq[e])
     return result
 
-print(insertionSort([5,4,3,2,1]))
+# print(insertionSort([5,4,3,2,1]))
+print(insertionSort([3,2,4,5,1]))
+
 # Note, result is the invariant
