@@ -1,6 +1,5 @@
 START = 1
-
-def addElement(seq,element):
+def addElement(seq,element):                                           
     element_index = 0
 
     while (seq[element_index] <= element):
@@ -14,8 +13,7 @@ def insertionSort(seq):
     for e in range(START, len(seq)):
         result = addElement(result,seq[e])
     return result
-
-print(insertionSort([5,4,3,2,1]))
+print(insertionSort([4, 3, 2, 1, -5]))
 
 # print(insertionSort([3,2,4,5,1]))
 # START = 1
