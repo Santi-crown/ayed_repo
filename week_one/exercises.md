@@ -91,3 +91,4 @@ Construir un programa en Python 3.11 que resuelva cada uno de los siguientes pro
 quotient = dividend // divisor  # Integer division to get the quotient
 remainder = dividend % divisor   # Modulo operator to get the remainder
 ```
+![Alt text](image-1.png)
