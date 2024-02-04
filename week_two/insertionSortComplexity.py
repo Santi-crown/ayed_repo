@@ -1,5 +1,5 @@
 START = 1
-def addElement(seq,element):                                           
+def addElement(seq,element):
     element_index = 0
 
     while (seq[element_index] <= element):
