@@ -11,20 +11,34 @@ def get_lines():
             lines.append(line.split())
         return lines
 
-def get_letter_as_list(lista):
-    for i in range(len(lista)):
+def get_letters(lista):
+    word_list = []
+    """for i in range(len(lista)):
         for j in range(len(lista[i])):
             for e in lista[i][j]:
                 #we print each letter of the word
                 print(e)
-                """print(lista[i][j])"""
-        print("")
+
+        print("")"""
+    for line in lista:
+        for i in range(len(line)):
+            if len(line[i]) >= i:
+                for j in range(len(line[i])):
+                    if i == j:
+                        word_list.append(line[i][j])
+            else:
+                for j in range(len(line[i])):
+                    if i == j:
+                        word_list.append(line[i][j])
+    print(word_list)
+
+#def message():
 
 
 # def
 def main():
     lines = get_lines()
-    get_letter_as_list(lines)
+    get_letters(lines)
     """print(lines)"""
 main()
 
