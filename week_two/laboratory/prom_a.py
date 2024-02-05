@@ -23,7 +23,7 @@ def get_letters(lista):
     for line in lista:
         for i in range(len(line)):
             if len(line[i]) >= i:
-                for j in range(len(line[i])):
+                for j in range(len(line[i])): #There is a problem when a word don't have the lenght = to the index or is smaller.
                     if i == j:
                         word_list.append(line[i][j])
             else:
