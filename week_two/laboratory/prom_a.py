@@ -1,46 +1,55 @@
-
-
 def get_lines():
-    lines = []
-    case_number = int(input("Write the lines number: "))
 
-    for i in range(case_number):
-        for e in range(3):
-            line = input("Write the sentence please: ")
-            #we get the words as a list of a sentences list
-            lines.append(line.split())
-        return lines
+    print("Numero de casos")
+    cases = int(input("Digite el número de casos: "))
 
-def get_letters(lista):
-    word_list = []
-    """for i in range(len(lista)):
-        for j in range(len(lista[i])):
-            for e in lista[i][j]:
-                #we print each letter of the word
-                print(e)
+    cases_list = []
+    for i in range(cases):
 
-        print("")"""
-    for line in lista:
-        for i in range(len(line)):
-            if len(line[i]) >= i:
-                for j in range(len(line[i])): #There is a problem when a word don't have the lenght = to the index or is smaller.
-                    if i == j:
-                        word_list.append(line[i][j])
-            else:
-                for j in range(len(line[i])):
-                    if i == j:
-                        word_list.append(line[i][j])
-    print(word_list)
+        print("CASO", i+1)
+        print("Líneas")
+        lines_number = int(input("Escriba el número de lineas: "))
+        lines_list = []
+        for j in range(lines_number):
+            line = input("Escriba la linea: ")
+            lines_list.append(line.split())
 
-#def message():
+        cases_list.append(lines_list)
+    # print(cases)
+    return cases_list
 
 
-# def
+# lines_cases = [[['Hey', 'good', 'lawyer'], ['as', 'I', 'previously', 'previewed'], ['yam', 'does', 'a', 'soup']], [['First', 'I', 'give', 'money', 'to', 'Teresa'], ['after', 'I', 'inform', 'dad', 'of'], ['your', 'horrible', 'soup']]]
+
+
+def show_decoded_messaged_by_cases(list_cases):
+    index = 1
+    for case in list_cases:
+        decodded_message = word_list(case)
+        print("Case #", index)
+        for message in decodded_message:
+            print("".join(message))
+        print("")
+        index += 1
+
+def word_list(lines):
+    decoded_message_list = []
+    for line in lines:
+        decoded_word = []
+        # index nos dirá que letra extraer y nos dara la posición de la misma en el string
+        index = 0
+        #if len(line) >= index:
+        for word in line:
+            if len(word) > index:
+                decoded_word.append(word[index])
+                index += 1
+        decoded_message_list.append(decoded_word)
+
+    #print(decoded_message_list)
+    return decoded_message_list
+
+# def show_decodded_message(decodded_message_list):
 def main():
-    lines = get_lines()
-    get_letters(lines)
-    """print(lines)"""
+    lines_cases = get_lines()
+    show_decoded_messaged_by_cases(lines_cases)
 main()
-
-
-
