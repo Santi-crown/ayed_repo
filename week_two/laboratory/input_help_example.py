@@ -1,10 +1,12 @@
-lines = []
+cases_list = []
 cases = 0
-case_breaker = int(input())
-while cases != case_breaker:
+cases_breaker = int(input())
+blink_cases = 0
+#index
+for cases in range(cases_breaker + 1):
     line = input()
-    if line != "":
-        lines.append(line)
-        cases += 1
-
-print(lines)
+    # Un caso
+    while line != "":
+        cases_list.append(line.split())
+        line = input()
+print(cases_list)

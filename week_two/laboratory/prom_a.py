@@ -55,14 +55,30 @@ def main():
 main()"""
 
 # No tengo que jugar con los espacios vacios, tengo que jugar con las cases
-lines = []
+"""cases_list = []
 cases = 0
 case_breaker = int(input())
 while cases != case_breaker:
     line = input()
     if line != "":
-        lines.append(line)
-        cases += 1
+        cases_list.append(line)
+        cases += 1"""
 
-print(lines)
+# print(cases_list)
+
+
+cases_list = []
+cases = 0
+cases_breaker = int(input())
+blink_cases = 0
+#index
+for cases in range(cases_breaker + 1):
+    line = input()
+    # Un caso
+    while line != "":
+        cases_list.append(line.split())
+        line = input()
+print(cases_list)
+
+
 
