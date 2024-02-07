@@ -54,31 +54,25 @@ def main():
     show_decoded_messaged_by_cases(lines_cases)
 main()"""
 
-# No tengo que jugar con los espacios vacios, tengo que jugar con las cases
-"""cases_list = []
-cases = 0
-case_breaker = int(input())
-while cases != case_breaker:
-    line = input()
-    if line != "":
-        cases_list.append(line)
-        cases += 1"""
-
-# print(cases_list)
-
-
+lines_list = []
 cases_list = []
 cases = 0
 cases_breaker = int(input())
 blink_cases = 0
 #index
 for cases in range(cases_breaker + 1):
+
     line = input()
     # Un caso
     while line != "":
-        cases_list.append(line.split())
+        lines_list.append(line.split())
         line = input()
+    #print(lines_list)
+    cases_list.append(lines_list)
+    lines_list = []
+print(lines_list)
 print(cases_list)
+#print(cases_list)git
 
 
 
