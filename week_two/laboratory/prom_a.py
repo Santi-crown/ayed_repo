@@ -1,4 +1,4 @@
-def get_lines():
+"""def get_lines():
 
     print("Numero de casos")
     cases = int(input("Digite el número de casos: "))
@@ -52,4 +52,17 @@ def word_list(lines):
 def main():
     lines_cases = get_lines()
     show_decoded_messaged_by_cases(lines_cases)
-main()
+main()"""
+
+# No tengo que jugar con los espacios vacios, tengo que jugar con las cases
+lines = []
+cases = 0
+case_breaker = int(input())
+while cases != case_breaker:
+    line = input()
+    if line != "":
+        lines.append(line)
+        cases += 1
+
+print(lines)
+
