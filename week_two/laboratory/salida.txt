@@ -1,0 +1,16 @@
+[]
+diferente de vacio
+[]
+diferente de vacio
+[]
+diferente de vacio
+[]
+igualma vacio
+[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
+diferente de vacio
+[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
+diferente de vacio
+[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
+diferente de vacio
+[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
+[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
