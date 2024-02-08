@@ -1,25 +1,16 @@
-8
-
-
-Hey good lawyer
-
-diferente de vacio
-as I previously previewed
-
-diferente de vacio
-yam does a soup
-
-diferente de vacio
-
-
-igualma vacio
-First I give money to Teresa
-
-diferente de vacio
-after I inform dad of
-
-diferente de vacio
-your horrible soup
-
-diferente de vacio
-[[['Hey', 'good', 'lawyer'], ['as', 'I', 'previously', 'previewed'], ['yam', 'does', 'a', 'soup']], [['First', 'I', 'give', 'money', 'to', 'Teresa'], ['after', 'I', 'inform', 'dad', 'of'], ['your', 'horrible', 'soup']]]
+Case #1:
+How
+are
+you
+Case #2:
+Fine
+and
+you
+Case #3:
+Fine
+and
+you
+Case #4:
+Fine
+and
+you
