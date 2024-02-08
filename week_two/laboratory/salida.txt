@@ -1,16 +1,25 @@
-[]
+8
+
+
+Hey good lawyer
+
 diferente de vacio
-[]
+as I previously previewed
+
 diferente de vacio
-[]
+yam does a soup
+
 diferente de vacio
-[]
+
+
 igualma vacio
-[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
+First I give money to Teresa
+
 diferente de vacio
-[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
+after I inform dad of
+
 diferente de vacio
-[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
+your horrible soup
+
 diferente de vacio
-[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
-[['Hey good lawyer', 'as I previously previewed', 'yam does a soup']]
+[[['Hey', 'good', 'lawyer'], ['as', 'I', 'previously', 'previewed'], ['yam', 'does', 'a', 'soup']], [['First', 'I', 'give', 'money', 'to', 'Teresa'], ['after', 'I', 'inform', 'dad', 'of'], ['your', 'horrible', 'soup']]]
