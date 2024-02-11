@@ -1,63 +1,34 @@
 from sys import stdin
-
-def get_lines():
-    rango = int(stdin.readline().strip())
-    user_input = stdin.readlines()
-    # print(user_input)
-    # user_input = ['\n', 'Hey good lawyer\n', 'as I previously previewed\n', 'yam does a soup\n', '\n', 'First I give money to Teresa\n', 'after I inform dad of\n', 'your horrible soup\n']
-    # list of cases
-    list_cases = []
-
-    # list of lines
-    list_lines = []
-    # blank lines number
-    blank_lines = 1
-    for e in range(len(user_input)):
-        if user_input[e] != '\n':
-            list_lines.append(user_input[e].strip().split(' '))
-            # e + 1 nos permite validar una ultima vez al final del loop para agregar el segundo caso
-            if e + 1 == len(user_input):
-                list_cases.append(list_lines)
-        elif user_input[e] == '\n' and len(list_lines) > 0 or e == len(user_input) and len(list_lines) > 0:
-            list_cases.append(list_lines)
-            list_lines = []
-            blank_lines += 1
-        if blank_lines == rango:
-            break
-
-    return list_cases
-
-
-# lines_cases = [[['Hey', 'good', 'lawyer'], ['as', 'I', 'previously', 'previewed'], ['yam', 'does', 'a', 'soup']], [['First', 'I', 'give', 'money', 'to', 'Teresa'], ['after', 'I', 'inform', 'dad', 'of'], ['your', 'horrible', 'soup']]]
-
-
-def show_decoded_messaged_by_cases(list_cases):
-    index = 1
-    for case in list_cases:
-        decodded_message = word_list(case)
-        print("Case #", index)
-        for message in decodded_message:
-            print("".join(message))
-        print("")
-        index += 1
-
-def word_list(lines):
-    decoded_message_list = []
-    for line in lines:
-        decoded_word = []
-        # index nos dirá que letra extraer y nos dara la posición de la misma en el string
-        index = 0
-        #if len(line) >= index:
-        for word in line:
-            if len(word) > index:
-                decoded_word.append(word[index])
-                index += 1
-        decoded_message_list.append(decoded_word)
-
-    return decoded_message_list
-
-# def show_decodded_message(decodded_message_list):
-def main():
-    lines_cases = get_lines()
-    show_decoded_messaged_by_cases(lines_cases)
+def write(line):                                                                    # costo   pasos
+    words = []                                                                      #   1       1
+    # Variable que ayuda a llevar el control de la igualdad entre
+    # posición de la letra y la palabra
+    index = 0                                                                       #   1       1
+    # Recibe una linea y recorre cada palabra
+    for i in line: #ciclo de la invariante #1                                       #   1       n
+        # si el tamaño de la palabra es mayor que index entonces se
+        # agrega la letra i-sima de la palabra i-sima y la variable aumenta
+        if len(i) > index:                                                          #   1       n - 1
+            words.append(i[index])                                                  #   1       n - 1
+            index += 1                                                              #   1       n - 1
+    # unimos las letras y las imprimimos como palabras
+    words = map(str, words)                                                         #   1       1
+    print("".join(words))                                                           #   1       1
+                                                                                    # Total O = (n), omega = 1
+def main():                                                                         # costo   pasos
+    # leemos la primera linea - rango
+    rango = int(stdin.readline().strip())                                           #   1       1
+    # Ignoramos la blank line
+    empty = stdin.readline()                                                        #   1       1
+    #Para el rango establecido, iteramos las lineas
+    for i in range(rango):#ciclo de la invariante #2                                #   1       j
+        print("Case #" + str(i + 1) + ":")                                          #   1       j - 1
+        line = stdin.readline().strip().split(" ")                                  #   1       j - 1
+        # Validamos que la linea esté vacía
+        while len(line[0]) > 0:                                                     #   1       j - 1
+            # envia la linea y recibimos la palabra decodificada
+            write(line)                                                              # write(n)  j - 1
+            # lee la siguiente linea
+            line = stdin.readline().strip().split(" ")                              # 1         j - 1
+                                                                                    # Total O = (n), omega = 1
 main()
