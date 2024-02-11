@@ -8,7 +8,7 @@ def write(line):                                                # costo   pasos
             index += 1                                          #   1       n - 1
     words = map(str, words)                                     #   1       1
     print("".join(words))                                       #   1       1
-    return index                                                #   1       1
+    return index#no es necesario                                #   1       1
                                                                 #Total O = (n), omega = 1
 def main():                                                     # costo   pasos
     rango = int(stdin.readline().strip())                       #   1       1
@@ -19,4 +19,5 @@ def main():                                                     # costo   pasos
         while len(line[0]) > 0:                                 #   1       j - 1
             write(line)                                         # write(n)  j - 1
             line = stdin.readline().strip().split(" ")          # 1         j - 1
-main()                                                          #Total O = (n), omega = 1
+                                                                #Total O = (n), omega = 1
+main()
