@@ -1,3 +1,5 @@
+from sys import stdin
+
 def sum_even(n):
     if n < 2:
         return 0
@@ -8,4 +10,9 @@ def sum_even(n):
     elif n % 2 == 0:
         return n + sum_even(n-2) # invariante
 
-print(sum_even(9))
+n = stdin.readline().strip()
+
+while n != '':
+    print(sum_even(int(n)))
+    n = stdin.readline().strip()
+
