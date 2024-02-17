@@ -8,7 +8,7 @@ def sort_sequence(sequence = [] ):                                              
     # con posción 0.
     sequence.remove(element[0])                                                 #   n       n
     return element + sort_sequence(sequence) # invariante                       #   n^2     n
-
+                                                                  # Total O = (n^2), omega = 1
 line = list(stdin.readline().strip().split())
 while len(line) > 0:
     print(sort_sequence(line))
