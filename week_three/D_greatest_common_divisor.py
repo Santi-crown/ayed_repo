@@ -6,10 +6,10 @@ def gcd(m,n):
     return gcd(n,m % n) # invariante
 
 # print(gcd(100,95))
-
 inputs = stdin.readline().strip().split()
-int_inputs = list(map(int,inputs))
 
-n,m = int_inputs[0], int_inputs[1]
-
-print(gcd(n,m))
+while len(inputs) > 0:
+    int_inputs = list(map(int,inputs))
+    n,m = int_inputs[0], int_inputs[1]
+    print(gcd(n,m))
+    inputs = stdin.readline().strip().split()
