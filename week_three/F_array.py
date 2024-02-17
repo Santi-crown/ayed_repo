@@ -1,3 +1,5 @@
+from sys import stdin
+
 def array(list):
     if len(list) <= 1:
         return list
@@ -6,4 +8,8 @@ def array(list):
     list.remove(element)
     return [element] + array(list) # invariante
 
-print(array([1,2,3,4,5,6]))
+line = stdin.readline().strip().split()
+while len(line) > 0:
+    # Map each string as int
+    print(list(map(int,array(line))))
+    line = stdin.readline().strip().split()

@@ -1,14 +1,13 @@
 from sys import stdin
 
-def sort_sequence(sequence = [] ):
-    if len(sequence) <= 1:
-        return sequence
-    element = [min(sequence)]
+def sort_sequence(sequence = [] ):                                              # costo   pasos
+    if len(sequence) <= 1:                                                      #   1       1
+        return sequence                                                         #   1       1
+    element = [min(sequence)]                                                   #   n       n
     # como sumamos el minimo al inicio, entonces debemos remover el elemento
     # con posción 0.
-    sequence.remove(element[0])
-    return element + sort_sequence(sequence) # invariante
-
+    sequence.remove(element[0])                                                 #   n       n
+    return element + sort_sequence(sequence) # invariante                       #   n^2     n
 
 line = list(stdin.readline().strip().split())
 while len(line) > 0:
