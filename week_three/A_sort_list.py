@@ -7,8 +7,8 @@ def sort_sequence(sequence = [] ):                                              
     # como sumamos el minimo al inicio, entonces debemos remover el elemento
     # con posción 0.
     sequence.remove(element[0])                                                 #   n       n
-    return element + sort_sequence(sequence) # invariante                       #   n^2     n
-                                                                  # Total O = (n^2), omega = 1
+    return element + sort_sequence(sequence) # invariante                       #   n*n     n
+                                                                                # Total O = (n^2)
 line = list(stdin.readline().strip().split())
 while len(line) > 0:
     print(sort_sequence(line))

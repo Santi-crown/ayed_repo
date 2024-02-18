@@ -1,10 +1,11 @@
 from sys import stdin
 
-def gcd(m,n):
-    if n == 0:
-        return m
-    return gcd(n,m % n) # invariante
-
+def gcd(m,n):                                   # costo   pasos
+    if n == 0:                                  #   1       1
+        return m                                #   1       1
+    return gcd(n,m % n) # invariante            #   n       n
+                                                # Total O = (n)
+# print(gcd(100,95))
 # print(gcd(100,95))
 inputs = stdin.readline().strip().split()
 
