@@ -26,7 +26,7 @@ def mergeSort(A=[]):
         return A
     half = len(A)//2
     #Dividir
-    #print('Dividir A={}, left={}, right={}'.format(A, A[:half], A[half:]))
+    print('Dividir A={}, left={}, right={}'.format(A, A[:half], A[half:]))
     left, right = mergeSort(A[:half]), mergeSort(A[half:])
     print('Conquistar A={}, sorted_left={}, sorted_right={}'.format(A, left, right))
     #Conquistar
