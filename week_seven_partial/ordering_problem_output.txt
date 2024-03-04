@@ -1,2 +1,2 @@
 [('Luisa', 18), ('Pedro', 20), ('Juan', 25), ('María', 30)]
-Nombre de la persona más joven:  Luisa
+Luisa

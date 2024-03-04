@@ -69,6 +69,4 @@ def main():
         sort_in = mergeSort(A)
         time1 = time()
         print("Merge Sort time : {}".format(time1 - time0))
-
-
 main()
