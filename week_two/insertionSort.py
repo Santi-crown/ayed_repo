@@ -11,3 +11,5 @@ def insertionSort(sequence):
         #print(elem, str(sequence[:index+1]) + '-->'+ str(insertionSortElement(elem, sequence[:index])), sequence[index+1:], insertionSortElement(elem, sequence[:index]) + sequence[index+1:])
         sequence = insertionSortElement(elem, sequence[:index]) + sequence[index+1:]
     return sequence
+
+print(insertionSort([4,1,9,3,100,66,8,100]))
