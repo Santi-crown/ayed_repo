@@ -1,22 +1,13 @@
-START = 1
-
-def addElement(element, seq):
-    element_index = 0
-    while not (seq[element_index] > element):
-        element_index = element_index + 1
-    return seq[:element_index] + [element] + seq[element_index:] # is a sugar syntax to conveniently slice a list.
-    # The key point here is to insert into two elements, initially, it's between [] and [4], then, when e = 1, it's at [3] because counting starts from 1
-
-def insertionSort(seq):
-    result = seq[:START]
-    for e in range(START,len(seq)):
-        # print( result)
-        # print(seq[e],result)
-        # print (result)
-        result = addElement(seq[e], result)
-        # print(result)
-        # print( result)
-    return result
-# def main():
-print(insertionSort([4,3,2,1,-5]))
-# main()
+def insertionSortElement(new_el, sequence):
+    index = 0
+    while index < len(sequence) and new_el > sequence[index]:
+        index+=1
+    return sequence[:index] + [new_el] + sequence[index:]
+#pre: sequence is a list of comparable objects
+def insertionSort(sequence):
+    #print(sequence)
+    for index in range(1,len(sequence)):
+        elem = sequence[index]
+        #print(elem, str(sequence[:index+1]) + '-->'+ str(insertionSortElement(elem, sequence[:index])), sequence[index+1:], insertionSortElement(elem, sequence[:index]) + sequence[index+1:])
+        sequence = insertionSortElement(elem, sequence[:index]) + sequence[index+1:]
+    return sequence
