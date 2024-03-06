@@ -21,5 +21,4 @@ def main():
         n, k = line.split()
         n = str(sum(map(int, n)) * int(k))
         print(super_digit(n))
-
 main()
