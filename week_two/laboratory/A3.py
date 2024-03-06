@@ -18,6 +18,5 @@ def main():                                                     # costo   pasos
         line = stdin.readline().strip().split(" ")              #   1       j - 1
         while len(line[0]) > 0:                                 #   1       j - 1
             write(line)                                         # write(n)  j - 1
-            line = stdin.readline().strip().split(" ")          # 1         j - 1
-                                                                #Total O = (n), omega = 1
+            line = stdin.readline().strip().split(" ")          # 1         j - 1                                                                #Total O = (n), omega = 1
 main()
