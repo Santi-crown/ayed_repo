@@ -1,0 +1,1 @@
+Sorted word by alphabetic order:  ['A', 'G', 'I', 'L', 'M', 'O', 'O', 'R', 'T']
