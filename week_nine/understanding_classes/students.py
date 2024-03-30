@@ -53,6 +53,4 @@ def main():
 
     for e in estudiantes:
         print(e)
-
-
 main()
