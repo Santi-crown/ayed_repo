@@ -1,4 +1,4 @@
-from sys import stdin
+ from sys import stdin
 
 def array(list):                                    # costo   pasos
     if len(list) <= 1:                              #   1       1
