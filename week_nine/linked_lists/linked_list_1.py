@@ -9,7 +9,6 @@ class Node:
         return self.value
     def getNext(self):
         return self.next
-
     def setNext(self, next):
         if not (isinstance(next,Node) or next is None):
             raise Exception('The type of the next attribute is not of the expected data type')
