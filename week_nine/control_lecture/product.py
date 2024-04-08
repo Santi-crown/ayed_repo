@@ -1,5 +1,6 @@
 import os
 
+WANDS_COUNT = 0
 def clear_console():
     """Función para limpiar la consola"""
     # El comando 'cls' limpia la consola en sistemas Windows
@@ -8,13 +9,18 @@ def clear_console():
 def show_manu():
     'Function to show the menu'
     clear_console()
-    print("Welcome to Olivanders' Wand Shop!")
-    print("Here you can find the perfect wand for you.")
-    print("Please choose an option:")
-    print("1. View available wands")
-    print("2. Buy a wand")
-    print("3. Customize a wand")
-    print("4. Exit")
+    global WANDS_COUNT
+    if WANDS_COUNT < 1:
+        print("Welcome to Olivanders' Wand Shop!")
+        print('Wands: ', WANDS_COUNT)
+        print("Here you can find the perfect wand for you.")
+        print("Please choose an option:")
+        print("1. View available wands")
+        print("2. Buy a wand")
+        print("3. Customize a wand")
+        print("4. Exit")
+    else:
+        print("Hey, wizzard, looks like you already get a wand, each wizzard just can buy a wand, you are buying a wand, no clothes, so you just can perzonalize you wand: \n3. Customize a wand")
 
 
 class Wand:
@@ -75,6 +81,7 @@ class Wand:
                                                                                            self.length,
                                                                                            self.engraving if self.engraving else 'No',                                                                                           self.price)
 def avaible_wands():
+    global WANDS_COUNT
     harryWand = Wand('pluma de fénix', 'acebo', 11, "child-who-lived")
     hermioneWand = Wand('pluma de fénix', 'tejo', 10)
     ronWand = Wand('pelo de unicornio', 'roble', 12)
@@ -90,6 +97,51 @@ def avaible_wands():
     print(wands_dictionary[user_wand][1])
     print(wands_dictionary[user_wand][0])
 
+    original_wand = wands_dictionary[user_wand[0]]
+    WANDS_COUNT += 1
+    input('Press enter to buy and go back to the menu')
+
+def buy_wand():
+    global WANDS_COUNT
+    print("It looks like you want to buy a wand. Let's go: ")
+    user_wand_materials = []
+    cores_dic = {
+        1: 'pluma de fénix',
+        2: 'pelo de unicornio',
+        3: 'escama de dragón',
+        4: 'fibra de corazón de dragón'
+    }
+    core = int(input("First, choose a core for you wand, this is our stock: \n1.pluma de fénix \n2.pelo de unicornio \n3.'escama de dragón \n4.'fibra de corazón de dragón"))
+    user_wand_materials.append(cores_dic[core])
+    clear_console()
+    wood_dic = {
+        1: 'sauce',
+        2: 'acebo',
+        3: 'roble',
+        4: 'tejo',
+        5: 'espino',
+        6: 'cerezo',
+        7: 'caoba'
+    }
+    wood = int(input('Alright, now, choose the wood of you wand, these are avaible: \n1. sauce \n2. acebo \n3. roble \n4. tejo \n5. espino \n6. cerezo \n7. caoba'))
+    user_wand_materials.append(wood_dic[wood])
+    clear_console()
+    user_size= int(input('Okey, you are almost there, now, choose the size of your wand, rememer that the mix size is 40 cm and the minimum is 10: '))
+    user_wand_materials.append(user_size)
+    print(user_wand_materials)
+    user_wand = Wand(cores_dic[core],wood_dic[wood],user_size,None)
+    print('Your wand is:')
+    print(user_wand)
+    print('The price is: ', user_wand.price)
+    WANDS_COUNT += 1
+    input('Press enter to buy and go back to the menu')
+    show_manu()
+
+def customize():
+    global user_
+
+
+
 
 #
 # # Mostrar detalles de las varitas
@@ -100,10 +152,10 @@ def avaible_wands():
 # print(voldemortWand)
 def main():
     'Main function'
+
     while True:
         show_manu()
         option = input('Select an option: ')
-
         if option == '1':
             clear_console()
             print('1. View available wands')
@@ -111,11 +163,16 @@ def main():
             input('Press Enter to continue...')
         elif option == '2':
             clear_console()
+            buy_wand()
             print('You have chose option 2.')
             input('Press Enter to continue...')
         elif option == '3':
             clear_console()
             print('You have chose option 3.')
+            if WANDS_COUNT < 1:
+                print('You need to get a wand first: ')
+            else:
+                customize()
             input('Press Enter to continue...')
         elif option == '4':
             clear_console()
