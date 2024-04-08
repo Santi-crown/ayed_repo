@@ -17,10 +17,10 @@ def show_manu():
         print("Please choose an option:")
         print("1. View available wands")
         print("2. Buy a wand")
-        print("3. Customize a wand")
-        print("4. Exit")
+        print("3. Exit")
     else:
-        print("Hey, wizzard, looks like you already get a wand, each wizzard just can buy a wand, you are buying a wand, no clothes, so you just can perzonalize you wand: \n3. Customize a wand")
+        print("Hey, wizzard, looks like you already get a wand, each wizzard just can buy a wand, see you")
+        print("3. Exit")
 
 
 class Wand:
@@ -124,11 +124,9 @@ def buy_wand():
         7: 'caoba'
     }
     wood = int(input('Alright, now, choose the wood of you wand, these are avaible: \n1. sauce \n2. acebo \n3. roble \n4. tejo \n5. espino \n6. cerezo \n7. caoba'))
-    user_wand_materials.append(wood_dic[wood])
     clear_console()
     user_size= int(input('Okey, you are almost there, now, choose the size of your wand, rememer that the mix size is 40 cm and the minimum is 10: '))
-    user_wand_materials.append(user_size)
-    print(user_wand_materials)
+
     user_wand = Wand(cores_dic[core],wood_dic[wood],user_size,None)
     print('Your wand is:')
     print(user_wand)
@@ -137,19 +135,11 @@ def buy_wand():
     input('Press enter to buy and go back to the menu')
     show_manu()
 
+
+
 def customize():
     global user_
 
-
-
-
-#
-# # Mostrar detalles de las varitas
-# print(harryWand)
-# print(hermioneWand)
-# print(ronWand)
-# print(dumbledoreWand)
-# print(voldemortWand)
 def main():
     'Main function'
 
@@ -167,14 +157,6 @@ def main():
             print('You have chose option 2.')
             input('Press Enter to continue...')
         elif option == '3':
-            clear_console()
-            print('You have chose option 3.')
-            if WANDS_COUNT < 1:
-                print('You need to get a wand first: ')
-            else:
-                customize()
-            input('Press Enter to continue...')
-        elif option == '4':
             clear_console()
             print('Bye.')
             break
