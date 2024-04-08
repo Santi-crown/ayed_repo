@@ -8,11 +8,15 @@ def clear_console():
 def show_manu():
     'Function to show the menu'
     clear_console()
-    print("Bienvenido al menú:")
-    print("1. Opción 1")
-    print("2. Opción 2")
-    print("3. Opción 3")
-    print("4. Salir")
+    print("Welcome to Olivanders' Wand Shop!")
+    print("Here you can find the perfect wand for you.")
+    print("Please choose an option:")
+    print("1. View available wands")
+    print("2. Buy a wand")
+    print("3. Customize a wand")
+    print("4. Exit")
+
+
 class Wand:
     AVAILABLE_WOODS = ['sauce', 'acebo', 'roble', 'tejo', 'espino', 'cerezo', 'caoba']
     AVAILABLE_CORES = ['pluma de fénix', 'pelo de unicornio', 'escama de dragón', 'fibra de corazón de dragón']
@@ -70,11 +74,23 @@ class Wand:
         return "[Wand | core: {}, wood: {}, length: {}, engraving: {}] price = {}".format(self.core, self.wood,
                                                                                            self.length,
                                                                                            self.engraving if self.engraving else 'No',                                                                                           self.price)
-# harryWand = Wand('pluma de fénix', 'acebo', 11, "child-who-lived")
-# hermioneWand = Wand('pluma de fénix', 'tejo', 10)
-# ronWand = Wand('pelo de unicornio', 'roble', 12)
-# dumbledoreWand = Wand('fibra de corazón de dragón', 'sauce', 13, "Twisted, yet powerful, like the wizard who wields it.")
-# voldemortWand = Wand('escama de dragón', 'caoba', 15, "Only i will live forever")
+def avaible_wands():
+    harryWand = Wand('pluma de fénix', 'acebo', 11, "child-who-lived")
+    hermioneWand = Wand('pluma de fénix', 'tejo', 10)
+    ronWand = Wand('pelo de unicornio', 'roble', 12)
+    dumbledoreWand = Wand('fibra de corazón de dragón', 'sauce', 13, "Twisted, yet powerful, like the wizard who wields it.")
+    voldemortWand = Wand('escama de dragón', 'caoba', 15, "Only i will live forever")
+    print("We have the wands of the most iconic characters")
+    print('1.Harry \n2. Hermione \n3 .Ron \n4. Dumbledore \n5. Voldemorth')
+
+    wands_dictionary = {'1': [harryWand,"Harrypotter's wand"], '2': [hermioneWand,"Hermione Granger's wand"], '3': [ronWand,"Ron Weasley's wand"], '4': [dumbledoreWand,"Albus Dumbledore's wand"], '5': [voldemortWand,"Lord Voldemort's wand"]}
+
+    user_wand = input('If you want to see the features of a wand, just type the number: ')
+    print('Great choice, characteristics of the magic wand')
+    print(wands_dictionary[user_wand][1])
+    print(wands_dictionary[user_wand][0])
+
+
 #
 # # Mostrar detalles de las varitas
 # print(harryWand)
@@ -90,7 +106,8 @@ def main():
 
         if option == '1':
             clear_console()
-            print('You have chose option 1.')
+            print('1. View available wands')
+            avaible_wands()
             input('Press Enter to continue...')
         elif option == '2':
             clear_console()
