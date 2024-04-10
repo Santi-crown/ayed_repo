@@ -111,9 +111,6 @@ class LinkedList:
 
     def __str__(self):
         return str(self.head)
-    def getValueHead(self):
-        current_value = self.head.getValue()
-        return current_value
 # mis funciones
 
 def main():
@@ -132,7 +129,7 @@ def main():
         card_not_discard = list.pop()
         list.append(card_not_discard)
         print(list)
-    print(list.getValueHead())
+    print(list.head.getValue())
 # while len(list) >  1
 main()
 
