@@ -1,4 +1,5 @@
 from sys import stdin
+# throwing cards
 # Data structure : queue
 class Node:
     def __init__(self, value = None):
@@ -109,11 +110,17 @@ class LinkedList:
             self.head = self.head.getNext() # El siguiente nodo se convierte en el nuevo head
             self.len -= 1
             return value
-
+    # Display the linked list as a number list with , between each number
     def __str__(self):
-        return str(self.head)
+        current = self.head
+        output = ""
+        while current:
+            output += str(current.getValue())
+            if current.getNext():
+                output += ","
+            current = current.getNext()
+        return output
 # mis funciones
-
 def main():
     # leemos el numero de cartas
     for number in stdin:
@@ -123,15 +130,12 @@ def main():
 
         for i in range(0, n):
             deck_cards.append(i+1)
-        # print(len(list))
         while len(deck_cards) > 1:
             discard_card = deck_cards.pop()
             ramaining_cards.append(discard_card)
             card_not_discard = deck_cards.pop()
             deck_cards.append(card_not_discard)
         remaining_card = deck_cards.head.getValue()
-        print("Discarted cards: {} \n Remaining card: {}".format(ramaining_cards., deck_cards.head.getValue()))
-
-# while len(list) >  1
+        print("Discarted cards: {} \nRemaining card: {}".format(ramaining_cards, deck_cards.head.getValue()))
 main()
 
