@@ -1,0 +1,183 @@
+Node(1) -->Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->x
+1
+Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->x
+Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(2) -->x
+Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(2) -->x
+3
+Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(2) -->x
+Node(5) -->Node(6) -->Node(7) -->Node(2) -->Node(4) -->x
+Node(5) -->Node(6) -->Node(7) -->Node(2) -->Node(4) -->x
+5
+Node(6) -->Node(7) -->Node(2) -->Node(4) -->x
+Node(7) -->Node(2) -->Node(4) -->Node(6) -->x
+Node(7) -->Node(2) -->Node(4) -->Node(6) -->x
+7
+Node(2) -->Node(4) -->Node(6) -->x
+Node(4) -->Node(6) -->Node(2) -->x
+Node(4) -->Node(6) -->Node(2) -->x
+4
+Node(6) -->Node(2) -->x
+Node(2) -->Node(6) -->x
+Node(2) -->Node(6) -->x
+2
+Node(6) -->x
+Node(6) -->x
+6
+Node(6) -->Node(1) -->Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->x
+6
+Node(1) -->Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->x
+Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->x
+Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->x
+2
+Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->x
+Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->x
+Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->x
+4
+Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->x
+Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->x
+Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->x
+6
+Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->x
+Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->x
+Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->x
+8
+Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->x
+Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->x
+Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->x
+10
+Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->x
+Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->x
+Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->x
+12
+Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->x
+Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->x
+Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->x
+14
+Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->x
+Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->x
+Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->x
+16
+Node(17) -->Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->x
+Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->x
+Node(18) -->Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->x
+18
+Node(19) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->x
+Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->x
+Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->x
+1
+Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->x
+Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(3) -->x
+Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(3) -->x
+5
+Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(3) -->x
+Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(3) -->Node(7) -->x
+Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(3) -->Node(7) -->x
+9
+Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(3) -->Node(7) -->x
+Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(3) -->Node(7) -->Node(11) -->x
+Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(3) -->Node(7) -->Node(11) -->x
+13
+Node(15) -->Node(17) -->Node(19) -->Node(3) -->Node(7) -->Node(11) -->x
+Node(17) -->Node(19) -->Node(3) -->Node(7) -->Node(11) -->Node(15) -->x
+Node(17) -->Node(19) -->Node(3) -->Node(7) -->Node(11) -->Node(15) -->x
+17
+Node(19) -->Node(3) -->Node(7) -->Node(11) -->Node(15) -->x
+Node(3) -->Node(7) -->Node(11) -->Node(15) -->Node(19) -->x
+Node(3) -->Node(7) -->Node(11) -->Node(15) -->Node(19) -->x
+3
+Node(7) -->Node(11) -->Node(15) -->Node(19) -->x
+Node(11) -->Node(15) -->Node(19) -->Node(7) -->x
+Node(11) -->Node(15) -->Node(19) -->Node(7) -->x
+11
+Node(15) -->Node(19) -->Node(7) -->x
+Node(19) -->Node(7) -->Node(15) -->x
+Node(19) -->Node(7) -->Node(15) -->x
+19
+Node(7) -->Node(15) -->x
+Node(15) -->Node(7) -->x
+Node(15) -->Node(7) -->x
+15
+Node(7) -->x
+Node(7) -->x
+7
+Node(7) -->Node(1) -->Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->x
+7
+Node(1) -->Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->x
+Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->x
+Node(2) -->Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->x
+2
+Node(3) -->Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->x
+Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->x
+Node(4) -->Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->x
+4
+Node(5) -->Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->x
+Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->x
+Node(6) -->Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->x
+6
+Node(7) -->Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->x
+Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->x
+Node(8) -->Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->x
+8
+Node(9) -->Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->x
+Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->x
+Node(10) -->Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->x
+10
+Node(11) -->Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->x
+Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->x
+Node(12) -->Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->x
+12
+Node(13) -->Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->x
+Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->x
+Node(14) -->Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->x
+14
+Node(15) -->Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->x
+Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->x
+Node(16) -->Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->x
+16
+Node(17) -->Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->x
+Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->x
+Node(18) -->Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->x
+18
+Node(19) -->Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->x
+Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->x
+Node(20) -->Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->x
+20
+Node(1) -->Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->x
+Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(1) -->x
+Node(3) -->Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(1) -->x
+3
+Node(5) -->Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(1) -->x
+Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(1) -->Node(5) -->x
+Node(7) -->Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(1) -->Node(5) -->x
+7
+Node(9) -->Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(1) -->Node(5) -->x
+Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(1) -->Node(5) -->Node(9) -->x
+Node(11) -->Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(1) -->Node(5) -->Node(9) -->x
+11
+Node(13) -->Node(15) -->Node(17) -->Node(19) -->Node(1) -->Node(5) -->Node(9) -->x
+Node(15) -->Node(17) -->Node(19) -->Node(1) -->Node(5) -->Node(9) -->Node(13) -->x
+Node(15) -->Node(17) -->Node(19) -->Node(1) -->Node(5) -->Node(9) -->Node(13) -->x
+15
+Node(17) -->Node(19) -->Node(1) -->Node(5) -->Node(9) -->Node(13) -->x
+Node(19) -->Node(1) -->Node(5) -->Node(9) -->Node(13) -->Node(17) -->x
+Node(19) -->Node(1) -->Node(5) -->Node(9) -->Node(13) -->Node(17) -->x
+19
+Node(1) -->Node(5) -->Node(9) -->Node(13) -->Node(17) -->x
+Node(5) -->Node(9) -->Node(13) -->Node(17) -->Node(1) -->x
+Node(5) -->Node(9) -->Node(13) -->Node(17) -->Node(1) -->x
+5
+Node(9) -->Node(13) -->Node(17) -->Node(1) -->x
+Node(13) -->Node(17) -->Node(1) -->Node(9) -->x
+Node(13) -->Node(17) -->Node(1) -->Node(9) -->x
+13
+Node(17) -->Node(1) -->Node(9) -->x
+Node(1) -->Node(9) -->Node(17) -->x
+Node(1) -->Node(9) -->Node(17) -->x
+1
+Node(9) -->Node(17) -->x
+Node(17) -->Node(9) -->x
+Node(17) -->Node(9) -->x
+17
+Node(9) -->x
+Node(9) -->x
+9

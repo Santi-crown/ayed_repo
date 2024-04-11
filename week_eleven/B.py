@@ -1,3 +1,4 @@
+from sys import stdin
 # Data structure : queue
 class Node:
     def __init__(self, value = None):
@@ -118,18 +119,21 @@ def main():
     list = (LinkedList())
     # user_number_cards = int(input())
     # for user number
-    for i in range(0, 7):
-        list.append(i+1)
-    # print(len(list))
-    while len(list) > 1:
-        print(list)
-        discard_card = list.pop()
-        print(discard_card)
-        print(list)
-        card_not_discard = list.pop()
-        list.append(card_not_discard)
-        print(list)
-    print(list.head.getValue())
+    for number in stdin:
+        n = int(number.strip())
+
+        for i in range(0, n):
+            list.append(i+1)
+        # print(len(list))
+        while len(list) > 1:
+            print(list)
+            discard_card = list.pop()
+            print(discard_card)
+            print(list)
+            card_not_discard = list.pop()
+            list.append(card_not_discard)
+            print(list)
+        print(list.head.getValue())
 # while len(list) >  1
 main()
 
