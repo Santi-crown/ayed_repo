@@ -117,7 +117,7 @@ class LinkedList:
         while current:
             output += str(current.getValue())
             if current.getNext():
-                output += ","
+                output += ", "
             current = current.getNext()
         return output
 # mis funciones
@@ -127,7 +127,8 @@ def main():
         deck_cards = LinkedList()
         ramaining_cards = LinkedList()
         n = int(number.strip())
-
+        if n == 0:
+            break
         for i in range(0, n):
             deck_cards.append(i+1)
         while len(deck_cards) > 1:
@@ -136,6 +137,6 @@ def main():
             card_not_discard = deck_cards.pop()
             deck_cards.append(card_not_discard)
         remaining_card = deck_cards.head.getValue()
-        print("Discarted cards: {} \nRemaining card: {}".format(ramaining_cards, deck_cards.head.getValue()))
+        print("Discarded cards: {}\nRemaining card: {}".format(ramaining_cards, deck_cards.head.getValue()))
 main()
 
