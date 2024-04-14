@@ -1,6 +1,6 @@
 # Data structure : stack
-from collections import deque
-openSymbols = deque()
+openSymbols = []
+closedSymbols = []
 # [] --> "A"
 # () --> "P"
 # [( --> True
@@ -8,23 +8,25 @@ openSymbols = deque()
 # Si se intenta sacar algo de una pila que esta vacía, genera underfloor, está mal.
 # Para implementar A y P, se puede hacer con un diccionario.
 # ([])
-underFloor = False
-balanced = False
-u_input = "(([()])))"
+balanced = True
+u_input = "([])"
 for symbol in u_input:
-    if symbol == '(' or symbol == '[':
+    if symbol in "[(":
         openSymbols.append(symbol)
-    elif symbol == ')' and len(openSymbols) > 0 and openSymbols[-1] == '(':
-        try:
-            openSymbols.pop()
-        except IndexError:
-            underFloor = True
-            print("WTF BROU")
-    elif symbol == ']'  and len(openSymbols) > 0 and openSymbols[-1] == '[':
-        try:
-            openSymbols.pop()
-        except IndexError:
-            underFloor = True
-if len(openSymbols) == 0 and underFloor is False:
-    balanced = True
+    elif symbol == ')' and openSymbols and openSymbols[-1] == '(':
+        openSymbols.pop()
+    elif symbol == ']' and openSymbols and openSymbols[-1] == '[':
+        openSymbols.pop()
+    else:
+        closedSymbols.append(symbol)
+if openSymbols or closedSymbols:
+    balanced = False
+# print(openSymbols)
+# print(closedSymbols)
 print(balanced)
+# Casos de aceptación
+# openSymbols es vacio
+
+#Casos de no aceptación
+# openSymbols no vacio
+# Se intentan sacar parentesis de openSymbols vacio - underfloor
