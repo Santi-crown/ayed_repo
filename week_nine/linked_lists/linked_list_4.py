@@ -13,6 +13,9 @@ class Node:
         if not (isinstance(next, Node) or next is None):
             raise Exception("The data type of the next atributte is not of the expected data type")
         self.next = next
+    def clear(self):
+        self.value = None
+        self.next = None
     def __str__(self):
         return "({}) ---> {}".format(self.value, self.next if self.next else "X")
 class Linked_list:
@@ -87,11 +90,9 @@ class Linked_list:
                         self.setTail(prev)
                     else:
                         prev.setNext(node_to_delete.getNext())
-            node_to_delete.setValue(None)
-            node_to_delete.setNext(None)
+            node_to_delete.clear()
         else:
             raise Exception("Element not found")
-
 def main():
     # ll = Linked_list([1,2,3,4,5,6,7,8,9,10])
     # print(ll)
