@@ -91,6 +91,7 @@ class Linked_list:
                     else:
                         prev.setNext(node_to_delete.getNext())
             node_to_delete.clear()
+            self.len -= 1
         else:
             raise Exception("Element not found")
 def main():
