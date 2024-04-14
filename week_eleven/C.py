@@ -1,11 +1,7 @@
 # Data structure : stack
 from sys import stdin
-
-
 def is_balanced(u_input):
     openSymbols = []
-    closedSymbols = []
-    balanced = "Yes"
     for symbol in u_input:
         if symbol in "[(":
             openSymbols.append(symbol)
@@ -14,10 +10,8 @@ def is_balanced(u_input):
         elif symbol == ']' and openSymbols and openSymbols[-1] == '[':
             openSymbols.pop()
         else:
-            closedSymbols.append(symbol)
-    if openSymbols or closedSymbols:
-        balanced = "No"
-    return balanced
+            return "No"
+    return "No" if openSymbols else "Yes"
 # print(balanced)
 def main():
     n = int(stdin.readline())
