@@ -46,6 +46,7 @@ class LinkedList:
         else:
             tail = self.tail
             tail.setNext(new_node)
+
             self.setTail(new_node)
         self.len += 1
     def find(self, value):
