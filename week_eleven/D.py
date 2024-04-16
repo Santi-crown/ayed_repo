@@ -29,21 +29,19 @@ def main():
     myQueue = QueueWithTwoStacks()
     q = int(stdin.readline().strip())
     # 1 restriction
-    if q >= 0 and q <= 10**5:
-        for query in range(q):
-            line = stdin.readline().split()
-            type = line[0]
-            # 2 restriction
-            if type == '1':
-                value = line[1]
-                # 3 restriction
-                if int(value) >= 0 and int(value) <= 10**9:
-                    myQueue.put(value)
-                #print(type, value)
-            elif type == '2':
-                myQueue.pop()
-            elif type == '3':
-                print(myQueue.peek())
+    for query in range(q):
+        line = stdin.readline().split()
+        type = line[0]
+        # 2 restriction
+        if type == '1':
+            value = line[1]
+            # 3 restriction
+            myQueue.put(value)
+            #print(type, value)
+        elif type == '2':
+            myQueue.pop()
+        elif type == '3':
+            print(myQueue.peek())
 main()
 
 
