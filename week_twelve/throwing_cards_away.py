@@ -20,10 +20,13 @@ class Node:
         self.next = None
     def __str__(self):
         next = self.next
-        return "Node("+str(self.value)+") -->" + ("x" if next is None else str(next))
+        return "Node("+str(self.value)+") -->" + ("x" if next is None else
+str(next))
 class LinkedList:
-    def __init__(self):
+    def __init__(self, data = []):
         self.head, self.tail, self.len = None, None, 0
+        for e in data:
+            self.append(e)
     def __len__(self):
         return self.len
     def append(self, value):
@@ -99,20 +102,49 @@ class LinkedList:
         if self.isEmpty():
             raise Exception("List is empty")
         else:
-            value = self.head.getValue() # Obtenemso el valor del primer elemento (head)
-            self.head = self.head.getNext() # El siguiente nodo se convierte en el nuevo head
+            value = self.head.getValue()
+            self.head = self.head.getNext()
             self.len -= 1
             return value
-    # imprimir la linked list como una lista de números
     def __str__(self):
         current = self.head
         output = ""
         while current:
             output += str(current.getValue())
             if current.getNext():
-                output += ", "
+                output +=", "
             current = current.getNext()
         return output
+class Queue:
+    def __init__(self):
+        self.data = []
+    def enqueue(self, e):
+        self.data.append(e) #Punto de referencia cómo el inicio
+    def dequeue(self): #como punto de referencia el inicio
+        element = self.data[0]
+        self.data.pop(0)
+        return element
+    def __str__(self):
+        return "Queue("+str(self.data[0])+")"
+    def __len__(self):
+        return len(self.data)
+#Implementación LIFO
+class Stack:
+    def __init__(self):
+        self.data = []
+    def push(self, e):
+        #self.data.append(e) #Punto de referencia cómo el final
+        self.data.insert(0,e) #Punto de referencia cómo el inicio
+    def pop(self):
+        element = self.data[0]
+        self.data.pop(0)
+        return element
+        #self.data.pop(0) Punto de referencia es el inicio
+    def __str__(self):
+        return "Stack("+str(self.data[0])+")"
+    def __len__(self):
+        return len(self.data)
+
 def main():
     for number in stdin:
         deck_cards = LinkedList()
@@ -120,15 +152,14 @@ def main():
         n = int(number.strip())
         if n == 0:
             break
-        for i in range(n):
-            deck_cards.append(i+1)
-        while len(deck_cards) > 1:
-            discard_number = deck_cards.pop()
-            remaining_cards.append(discard_number)
-            no_discarted_card = deck_cards.pop()
-            deck_cards.append(no_discarted_card)
-            #print(deck_cards)
-            #print(remaining_cards)
-        print("Discarted cards: {}".format(remaining_cards))
-        print("Remaining card: {}".format(deck_cards.head.getValue()))
+        else:
+            for i in range(n):
+                deck_cards.append(1+i)
+            while len(deck_cards) > 1:
+                discarted_card = deck_cards.pop()
+                remaining_cards.append(discarted_card)
+                no_discarted_card = deck_cards.pop()
+                deck_cards.append(no_discarted_card)
+            print("Discarted cards: {}".format(remaining_cards))
+            print("Remaining card: {}".format(deck_cards.head.getValue()))
 main()
