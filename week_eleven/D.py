@@ -15,31 +15,16 @@ class QueueWithTwoStacks:
         if not self.stack2:
             while self.stack1:
                 self.stack2.append(self.stack1.pop())
-        return self.stack2.pop()
-
-    def peek(self):
-        if self.stack1:
-            return self.stack1[0]
-        elif self.stack2:
-            return self.stack2[-1]
+            return self.stack2.pop()
         else:
-            return None
+            return self.stack2.pop()
+    def peek(self):
+        if not self.stack2:
+           while self.stack1:
+               self.stack2.append(self.stack1.pop())
+        return self.stack2[-1]
     def __str__(self):
         return str(self.stack1)
-
-# myQueue = QueueWithTwoStacks()
-#
-# myQueue.enqueue(42)
-# myQueue.dequeue()
-# myQueue.enqueue(14)
-# print(myQueue.peek())
-# myQueue.enqueue(28)
-# print(myQueue.peek())
-# myQueue.enqueue(60)
-# myQueue.enqueue(78)
-# myQueue.dequeue()
-# myQueue.dequeue()
-#print(myQueue)
 def main():
     myQueue = QueueWithTwoStacks()
     q = int(stdin.readline().strip())
@@ -60,7 +45,6 @@ def main():
             elif type == '3':
                 print(myQueue.peek())
 main()
-
 
 
 
