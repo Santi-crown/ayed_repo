@@ -1,4 +1,3 @@
-from sys import stdin
 class Node:
     def __init__(self, value = None):
         self.value = value
@@ -20,10 +19,13 @@ class Node:
         self.next = None
     def __str__(self):
         next = self.next
-        return "Node("+str(self.value)+") -->" + ("x" if next is None else str(next))
+        return "Node("+str(self.value)+") -->" + ("x" if next is None else
+str(next))
 class LinkedList:
-    def __init__(self):
+    def __init__(self, data = []):
         self.head, self.tail, self.len = None, None, 0
+        for e in data:
+            self.append(e)
     def __len__(self):
         return self.len
     def append(self, value):
@@ -95,40 +97,50 @@ class LinkedList:
             self.len -= 1
         else:
             raise Exception("Element not found.")
-    def pop(self):
-        if self.isEmpty():
-            raise Exception("List is empty")
-        else:
-            value = self.head.getValue() # Obtenemso el valor del primer elemento (head)
-            self.head = self.head.getNext() # El siguiente nodo se convierte en el nuevo head
-            self.len -= 1
-            return value
-    # imprimir la linked list como una lista de números
+class Queue:
+    def __init__(self):
+        self.data = []
+    def enqueue(self, e):
+        self.data.append(e) #Punto de referencia cómo el inicio
+    def dequeue(self): #como punto de referencia el inicio
+        element = self.data[0]
+        self.data.pop(0)
+        return element
     def __str__(self):
-        current = self.head
-        output = ""
-        while current:
-            output += str(current.getValue())
-            if current.getNext():
-                output += ", "
-            current = current.getNext()
-        return output
+        return "Queue("+str(self.data[0])+")"
+    def __len__(self):
+        return len(self.data)
+#Implementación LIFO
+class Stack:
+    def __init__(self):
+        self.data = []
+    def push(self, e):
+        #self.data.append(e) #Punto de referencia cómo el final
+        self.data.insert(0,e) #Punto de referencia cómo el inicio
+    def pop(self):
+        element = self.data[0]
+        self.data.pop(0)
+        return element
+        #self.data.pop(0) Punto de referencia es el inicio
+    def __str__(self):
+        return "Stack("+str(self.data[0])+")"
+    def __len__(self):
+        return len(self.data)
+
 def main():
-    for number in stdin:
-        deck_cards = LinkedList()
-        remaining_cards = LinkedList()
-        n = int(number.strip())
-        if n == 0:
-            break
-        for i in range(n):
-            deck_cards.append(i+1)
-        while len(deck_cards) > 1:
-            discard_number = deck_cards.pop()
-            remaining_cards.append(discard_number)
-            no_discarted_card = deck_cards.pop()
-            deck_cards.append(no_discarted_card)
-            #print(deck_cards)
-            #print(remaining_cards)
-        print("Discarted cards: {}".format(remaining_cards))
-        print("Remaining card: {}".format(deck_cards.head.getValue()))
+    list = LinkedList([ i for i in range(1000)])
+    print(len(list))
+    current = list.getHead()
+    #print(current)
+    for e in range(len(list)):
+        #print(current.getValue())
+        current = current.getNext()
+    search_result = list.search(900)
+    #print("Buscando un valor", search_result.getValue() if search_result is not None else "Not found")
+    slc = list.slice(900,5)
+    #print(slc.getHead())
+    list_a = LinkedList([ i for i in range(10000)])
+    list_b = LinkedList([i for i in range(10000,100000)])
+    list_a.merge(list_b)
+    print(list_a.getTail())
 main()
