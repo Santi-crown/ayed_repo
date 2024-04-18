@@ -24,7 +24,7 @@ class Node:
         return "Node("+str(self.value)+") -->" + ("x" if next is None else str(next))
 
 class LinkedList:
-    def __init__(self ): # Here we delete values = []
+    def __init__(self): # Here we delete values = []
         self.head, self.tail, self.len = None, None, 0
         # Here we delete for e in data, SO WE NEED TO FIX THIS, IT MEAN THAT WE NEED TO APPEND ITERATIVE EACH VALUE OF MY NODES
     def __len__(self):

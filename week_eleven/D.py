@@ -1,14 +1,15 @@
 from sys import stdin
+# Tale of two stacks
 # La idea de implementar dos pilas como colas es
 # 1. hacer enqueue a las lista 1
-# 2. si se quiere hacer dequeue y la lista 2 esta vacía, se pasara todos los elementos de la stack1 a la dos, donde quedaran invertidos+
+# 2. si se quiere hacer dequeue y la lista 2 esta vacía, se pasara
+# todos los elementos de la stack1 a la dos, donde quedaran invertidos+
 #   Si no esta vacía, solo se hace pop al stack2
 # Ya
 class QueueWithTwoStacks:
     def __init__(self):
         self.stack1 = []
         self.stack2 = []
-
     def put(self, values):
         self.stack1.append(values)
     def pop(self):
@@ -43,7 +44,3 @@ def main():
         elif type == '3':
             print(myQueue.peek())
 main()
-
-
-
-
